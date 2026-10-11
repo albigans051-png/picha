@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pisang Matcha Co. | Sensasi Renyah Lumpia Pisang Berbalut Kyoto Matcha</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="Nikmati sensasi kelezatan pisang pilihan dibalut kulit lumpia renyah garing dan disiram lumeran saus matcha autentik Kyoto Jepang. Pesan online sekarang!">
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+    <!-- Navbar Start -->
+    <header class="header">
+        <nav class="navbar" id="navbar">
+            <a href="#home" class="navbar-logo">
+                <img src="assets/picha.png" alt="Pisang Matcha Logo" class="brand-logo">
+            </a>
+
+            <div class="navbar-nav" id="navbarNav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">Tentang Kami</a>
+                <a href="#menu" class="nav-link">Menu Favorit</a>
+                <a href="#testimoni" class="nav-link">Testimoni</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+            </div>
+
+            <div class="navbar-extra">
+                <button type="button" class="icon-btn" id="search-btn" aria-label="Cari Menu">
+                    <i data-feather="search"></i>
+                </button>
+                <button type="button" class="icon-btn" id="cart-btn" aria-label="Buka Keranjang">
+                    <i data-feather="shopping-cart"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+                <button type="button" class="icon-btn hamburger-btn" id="hamburger-menu" aria-label="Toggle Menu">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- Navbar Finish -->
+
+    <!-- Search Popup Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-box">
+            <i data-feather="search" class="search-input-icon"></i>
+            <input type="text" id="searchInput" placeholder="Cari varian pisang matcha favoritmu..." autocomplete="off">
+            <button class="close-search-btn" id="closeSearchBtn" aria-label="Tutup pencarian">
+                <i data-feather="x"></i>
+            </button>
+        </div>
+        <div class="search-results" id="searchResults"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section Start -->
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span>Pisang Matcha</span>
+                    </div>
+                    <h1 class="hero-title">
+                       PICHA PICHA <span class="highlight-text">Camilan pisang crispy berbalut kulit lumpia dengan cita rasa matcha</span>
+                    </h1>
+                    <p class="hero-desc">
+                        Pisang Matcha adalah makanan ringan yang terbuat dari pisang pilihan yang dibalut dengan kulit lumpia, kemudian digoreng hingga renyah dan berwarna keemasan. Bagian dalamnya memiliki tekstur pisang yang lembut dengan cita rasa manis, dipadukan dengan bubuk matcha yang memberikan rasa khas teh hijau.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#menu" class="btn btn-primary">
+                            <span>Pesan Sekarang</span>
+                            <i data-feather="arrow-right"></i>
+                        </a>
+                        <a href="#about" class="btn btn-secondary">
+                            <span>Cerita Kami</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">1+</span>
+                            <span class="stat-label">Porsi Terjual</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">4.9 ★</span>
+                            <span class="stat-label">Rating Pelanggan</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">Fresh</span>
+                            <span class="stat-label">Goreng Dadakan</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-card-glow"></div>
+                    <div class="hero-img-wrapper">
+                        <img src="assets/hero.jpg" alt="Pisang Goreng Crispy Saus Matcha" class="hero-img">
+                        <div class="floating-badge badge-top">
+                            <span class="floating-icon">🍵</span>
+                            <div>
+                                <strong>Cemilan Pisang Matcha</strong>
+                                <small>Picha Picha</small>
+                            </div>
+                        </div>
+                        <div class="floating-badge badge-bottom">
+                            <span class="floating-icon">🥟</span>
+                            <div>
+                                <strong>Kulit Lumpia Super Renyah</strong>
+                                <small>Kriuk Gurih & Lumer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hero Section Finish -->
+
+        <!-- About / Keunggulan Section Start -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">KENAPA HARUS KAMI?</span>
+                    <h2 class="section-title">Kelezatan Premium dari Bahan Berkualitas</h2>
+                    <p class="section-subtitle">Kami tidak sekadar menjual pisang goreng biasa, melainkan dessert berkelas dengan resep istimewa.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <i data-feather="award"></i>
+                        </div>
+                        <h3>Pisang Manis Pilihan</h3>
+                        <p>Hanya menggunakan pisang matang segar pilihan dengan tingkat kemanisan alami yang legit dan tekstur empuk lembut di dalam.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <i data-feather="shield"></i>
+                        </div>
+                        <h3>Kulit Lumpia Super Renyah</h3>
+                        <p>Dibalut kulit lumpia tipis berkualitas yang digoreng hingga garing keemasan dengan sensasi kriuk tahan lama tanpa berminyak berlebih.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <i data-feather="zap"></i>
+                        </div>
+                        <h3>Goreng Fresh Dadakan</h3>
+                        <p>Setiap pesanan digoreng langsung saat kamu memesan (made to order), menjamin kerenyahan 'kriuk' tahan lama sampai ke rumah.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <i data-feather="gift"></i>
+                        </div>
+                        <h3>Lumeran Matcha Asli</h3>
+                        <p>Saus glaze matcha pekat diolah dari bubuk green tea pilihan dengan aroma wangi menenangkan dan cita rasa manis creamy yang pas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section Finish -->
+
+        <!-- Menu Section Start -->
+        <section class="menu section" id="menu">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">MENU UTAMA</span>
+                    <h2 class="section-title">Pisang Matcha Kulit Lumpia</h2>
+                    <p class="section-subtitle">Satu menu andalan terbaik kami: perpaduan pisang manis, balutan kulit lumpia super renyah, dan lumeran matcha istimewa!</p>
+                </div>
+
+                <!-- Highlight Badge -->
+                <div class="menu-categories single-category">
+                    <span class="single-menu-tag">
+                        <i data-feather="check-circle"></i>
+                        100% Olahan Pisang Manis Berbalut Kulit Lumpia Krispi
+                    </span>
+                </div>
+
+                <!-- Product Grid (Single Menu Showcase) -->
+                <div class="product-grid single-menu" id="productGrid">
+                    <!-- Single Menu: Pisang Matcha Lumpia Crispy -->
+                    <article class="product-card" data-category="lumpia">
+                        <div class="product-badge">Best Seller • Spesial Lumpia</div>
+                        <div class="product-img-box">
+                            <img src="assets/menu-roll.jpg" alt="Pisang Matcha Lumpia Crispy" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-meta">
+                                <span class="product-stars">★★★★★</span>
+                                <span class="product-sold">1+ terjual</span>
+                            </div>
+                            <h3 class="product-title">Pisang Matcha Lumpia Crispy</h3>
+                            <p class="product-desc">Pisang Matcha adalah camilan lezat berbahan dasar pisang pilihan yang dibalut lembaran kulit lumpia, digoreng hingga renyah garing keemasan, dan dipadukan dengan lumeran saus matcha autentik yang khas. Perpaduan rasa manis legit, gurih, dan tekstur crispy membuatnya lezat dan cocok dinikmati kapan saja!</p>
+                            
+                            <div class="product-features-pills">
+                                <span class="feature-pill"><i data-feather="check"></i> Kulit Lumpia Super Kriuk</span>
+                                <span class="feature-pill"><i data-feather="check"></i> Pisang Manis Legit</span>
+                                <span class="feature-pill"><i data-feather="check"></i> Saus Matcha Lumer</span>
+                            </div>
+
+                            <div class="product-footer">
+                                <div class="product-price">
+                                    <span class="currency">Rp</span>
+                                    <span class="amount">5.000</span>
+                                    <small style="color: var(--text-muted); font-size: 0.82rem; margin-left: 4px;">/ porsi</small>
+                                </div>
+                                <button class="btn-add-cart" onclick="addToCart(1)" aria-label="Tambah Pisang Matcha Lumpia ke keranjang">
+                                    <i data-feather="plus"></i>
+                                    <span>Pesan Sekarang</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Promo Banner -->
+                <div class="promo-box">
+                    <div class="promo-content">
+                        <h3>🎉 Paket Hemat Box<h3>
+                        <p>Beli 2 Box Pisang Matcha Lumpia (isi 5/porsi) lebih hemat! Cuma <strong>Rp 8.000</strong> (Hemat Rp 2.000, cocok dinikmati rame-rame)!</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="addComboToCart()">
+                        <span>Klaim Paket Hemat</span>
+                        <i data-feather="shopping-bag"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Menu Section Finish -->
+
+        <!-- Testimonial Section Start -->
+        <section class="testimonials section" id="testimoni">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">KATA MEREKA</span>
+                    <h2 class="section-title">Apa Kata Pecinta Picha Picha?</h2>
+                    <p class="section-subtitle">Simak pengalaman mereka yang sudah mencoba kenikmatan pisang matcha kami.</p>
+                </div>
+
+                    <div class="testi-card">
+                        <div class="testi-stars">★★★★★</div>
+                        <p class="testi-text">"Rasanya nikmat kulit lumpiyanya tetap renyah garing kress. Recommended banget!"</p>
+                        <div class="testi-user">
+                            <div class="user-avatar">SK</div>
+                            <div>
+                                <h4>Faqih Hidayatulail</h4>
+                                <small>Customer Setia Picha</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonial Section Finish -->
+
+        <!-- Contact & Order Section Start -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="contact-card">
+                    <div class="contact-info">
+                        <span class="section-tag">HUBUNGI KAMI</span>
+                        <h2>Mau Pesan Ditempat atau Pengiriman Langsung?</h2>
+                        <p>Lokasi tempat berjualan ada di Kampus IBI-KOSGORO 1957</p>
+                        
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <i data-feather="map-pin"></i>
+                                <div>
+                                    <strong>Lokasi Outlet</strong>
+                                    <p>Jl. Moch. Kahfi II No.33, RT.1/RW.5, Srengseng Sawah, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota </p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i data-feather="clock"></i>
+                                <div>
+                                    <strong>Jam Buka</strong>
+                                    <p>Setiap Hari: 08:00 - 15:00 WIB</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i data-feather="phone-call"></i>
+                                <div>
+                                    <strong>WhatsApp Hotline</strong>
+                                    <p>+62 895-1059-2814</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-box">
+                        <h3>Kirim Pesan / Tanya Admin</h3>
+                        <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                            <div class="form-group">
+                                <label for="contactName">Nama Lengkap</label>
+                                <input type="text" id="contactName" placeholder="Contoh: Budi Santoso" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactPhone">Nomor WhatsApp</label>
+                                <input type="tel" id="contactPhone" placeholder="0812xxxxxxxx" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactNote">Catatan / Permintaan Khusus</label>
+                                <textarea id="contactNote" rows="3" placeholder="Mau pesan berapa porsi atau tanya ketersediaan outlet..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i data-feather="send"></i>
+                                <span>Kirim via WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section Finish -->
+    </main>
+
+    <!-- Slide-in Shopping Cart Sidebar -->
+    <div class="cart-backdrop" id="cartBackdrop"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <div class="cart-title-box">
+                <i data-feather="shopping-bag"></i>
+                <h3>Keranjang Belanja</h3>
+            </div>
+            <button class="cart-close-btn" id="closeCartBtn" aria-label="Tutup keranjang">
+                <i data-feather="x"></i>
+            </button>
+        </div>
+
+        <div class="cart-items" id="cartItemsList">
+            <!-- Items rendered dynamically via JS -->
+            <div class="empty-cart-state">
+                <i data-feather="shopping-cart"></i>
+                <p>Keranjang kamu masih kosong</p>
+                <small>Yuk pilih varian pisang matcha favoritmu!</small>
+            </div>
+        </div>
+
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong id="cartSubtotal">Rp 0</strong>
+                </div>
+                <div class="summary-row note">
+                    <small>Ongkos kirim dihitung via WhatsApp</small>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-block checkout-btn" id="checkoutBtn" onclick="checkoutWhatsApp()">
+                <i data-feather="message-circle"></i>
+                <span>Checkout via WhatsApp</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toastNotification">
+        <i data-feather="check-circle" class="toast-icon"></i>
+        <span id="toastMessage">Item berhasil ditambahkan!</span>
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <img src="assets/picha.png" alt="Picha Logo" class="footer-logo">
+                <p>Menjual jajanan pisang matcha yang sangat kekinian di era sekarang</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i data-feather="instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#menu">Menu Favorit</a></li>
+                    <li><a href="#testimoni">Ulasan</a></li>
+                    <li><a href="#contact">Lokasi Outlet</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 Pisang Matcha Co. Seluruh Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+    <!-- Footer Finish -->
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize feather icons
+        feather.replace();
+    </script>
+</body>
+</html>
